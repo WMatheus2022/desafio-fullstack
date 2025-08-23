@@ -9,9 +9,7 @@ connectDB(); // conecta ao banco
 const app = express();
 
 app.use(
-  cors({
-    origin: "https://cotabox-projeto-jhnb.vercel.app", // URL do frontend
-  })
+  cors()
 );
 app.use(express.json());
 
