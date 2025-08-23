@@ -10,8 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin:
-      "https://cotabox-projeto-jhnb-git-main-wanders-projects-b064d73c.vercel.app",
+    origin: "https://cotabox-projeto-jhnb.vercel.app", // URL do frontend
   })
 );
 app.use(express.json());
