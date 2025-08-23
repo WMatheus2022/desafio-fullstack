@@ -8,13 +8,11 @@ connectDB(); // conecta ao banco
 
 const app = express();
 
-import cors from "cors";
 app.use(
   cors({
-    origin: "https://cotabox-projeto-jhnb.vercel.app",
+    origin: "https://cotabox-projeto-jhnb.vercel.app", // URL do frontend
   })
 );
-
 app.use(express.json());
 
 // Rotas
