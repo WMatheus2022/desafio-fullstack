@@ -1,12 +1,10 @@
-FROM node:latest
-
-WORKDIR /api
-
+FROM node:22 AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
 COPY . .
 
-RUN rm -rf node_modules
-RUN npm i
-
-CMD ["node", "server.js"]
-
 EXPOSE 3000
+
+CMD ["npm", "start"]
+
